@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-import noteRoutes from './routes/notes.js';
+// import noteRoutes from './routes/notes.js';
 
 const app = express();
 
@@ -22,10 +22,10 @@ app.get('/newendpoint', (req, res) => {
   res.send('This is my new endpoint');
 })
 
-// app.post('/notes', (req, res) => {
-//   console.log('in notes');
-//   console.log(req.body);
-// })
+app.post('/notes', (req, res) => {
+  console.log('in notes');
+  console.log(req.body);
+})
  
 app.listen(process.env.PORT || 3001, () =>
   console.log(`Example app listening at http://localhost:${port}`),

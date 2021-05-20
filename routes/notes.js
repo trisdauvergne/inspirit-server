@@ -1,9 +1,9 @@
-import express from 'express';
+// import express from 'express';
 
-import { newNote } from '../controllers/notes.js';
+// import { newNote } from '../controllers/notes.js';
 
-const router = express.Router();
+// const router = express.Router();
 
-router.post('/', newNote);
+// router.post('/', newNote);
 
-export default router;
+// export default router;
