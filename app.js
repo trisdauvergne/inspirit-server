@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-// import noteRoutes from './routes/notes.js';
+import noteRoutes from './routes/notesRoutes.js';
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// app.use('/notes', noteRoutes);
+app.use('/notes', noteRoutes);
 
 app.get('/', (req, res) => {
   res.send({ message: 'Server connected WHOOOOOO' });
@@ -20,12 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/newendpoint', (req, res) => {
   res.send('This is my new endpoint');
-})
-
-app.post('/notes', (req, res) => {
-  console.log('in notes');
-  console.log(req.body);
-})
+});
  
 app.listen(process.env.PORT || 3001, () =>
   console.log(`Example app listening at http://localhost:${port}`),
