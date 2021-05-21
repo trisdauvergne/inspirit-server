@@ -1,6 +1,6 @@
 const messageData = [
   {
-    message: 'You got into Salt and completed the course!',
+    message: 'You are still alive.',
     id: Math.random() * 1000,
   },
 ]
