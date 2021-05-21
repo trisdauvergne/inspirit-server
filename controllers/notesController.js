@@ -8,10 +8,12 @@ const messageData = [
 export const newNote = async (req, res) => {
   console.log('in notes controller');
   let input = req.body.message;
-  const youtube = /youtube/i;
-  if (youtube.test(input)) {
+  const youtube1 = /youtube/i;
+  const youtube2 = /youtu\.be/i;
+  if (youtube1.test(input) || youtube2.test(input)) {
+    const youTubeId = req.body.message.slice(-11);
     let newMessage = {
-      video: input,
+      video: youTubeId,
       id: Math.random() * 1000
     };
     console.log('the video is', newMessage);
