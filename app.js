@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/notes', noteRoutes);
 
 app.get('/', (req, res) => {
-  res.send({ message: 'Server connected WHOOOOOO' });
+  res.send({ message: 'Yes' });
   console.log('in app.get');
 });
 
